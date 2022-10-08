@@ -42,7 +42,7 @@ module.exports = {
     },
 
     // update thought by id
-    updateThought({ params, body }, res) {
+    updateThoughtById({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
             body,
@@ -59,7 +59,7 @@ module.exports = {
     },
 
     // delete thought by id
-    deleteThought({ params }, res) {
+    deleteThoughtById({ params }, res) {
         Thought.findOneAndDelete({ _id: params.thoughtId })
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
