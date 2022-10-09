@@ -12,6 +12,8 @@ const {
 
 router.route('/').get(getThoughts);
 
+router.route('/').get(getThoughts).post(createThought);
+
 router.route('/:userId').post(createThought);
 
 router.route('/thoughtId').get(getThoughtById).put(updateThoughtById);
