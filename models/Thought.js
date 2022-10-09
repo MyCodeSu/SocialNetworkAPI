@@ -1,7 +1,6 @@
 const { Schema, model } = require('mongoose');
-const reactionSchema = require('..models/Reaction');
+const reactionSchema = require('./Reaction.js');
 const dayjs = require('dayjs');
-const { stringify } = require('querystring');
 
 const thoughtSchema = new Schema (
     {
