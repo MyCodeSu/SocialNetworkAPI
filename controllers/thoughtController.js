@@ -101,7 +101,7 @@ module.exports = {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
             { $pull: { reactions: { reactionId: params.reactionId } } },
-            { new: true, runValidators: true }
+            { runValidators: true, new: true }
         )
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
